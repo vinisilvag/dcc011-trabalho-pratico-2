@@ -1,4 +1,5 @@
 from csv import reader
+import pandas as pd
 
 CSV_PATH = "BH.csv"
 
@@ -381,7 +382,7 @@ def process_patients():
 
 def patients_symptoms_schema():
   schema = """CREATE TABLE PacienteSintomas(
-    IDPaciente INTEGER NOT NULL REFERENCES Paciente (IDPaciente),
+    IDPaciente INTEGER NOT NULL REFERENCES Paciente (IDPaciente) ON DELETE CASCADE,
     IDSintoma INTEGER NOT NULL REFERENCES Sintomas (IDSintoma)
 );\n
 """
@@ -448,7 +449,7 @@ def process_patients_symptoms():
 
 def patients_risk_factors_schema():
   schema = """CREATE TABLE PacienteFatores(
-    IDPaciente INTEGER NOT NULL REFERENCES Paciente (IDPaciente),
+    IDPaciente INTEGER NOT NULL REFERENCES Paciente (IDPaciente) ON DELETE CASCADE,
     IDFator INTEGER NOT NULL REFERENCES FatoresRisco (IDFator)
 );\n
 """
@@ -540,6 +541,8 @@ def main():
     file.write(patients_risk_factors)
 
     file.write('COMMIT;\n')
+
+    file.write('PRAGMA foreign_keys=on;\n')
 
     file.close()
 
