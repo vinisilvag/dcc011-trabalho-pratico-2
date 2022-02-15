@@ -527,13 +527,13 @@ def main():
     file.write(patient_schema())
     file.write(patients)
 
-    # patients_symptoms = process_patients_symptoms()
-    # file.write(patients_symptoms_schema())
-    # file.write(patients_symptoms)
+    patients_symptoms = process_patients_symptoms()
+    file.write(patients_symptoms_schema())
+    file.write(patients_symptoms)
 
-    # patients_risk_factors = process_patients_risk_factors()
-    # file.write(patients_risk_factors_schema())
-    # file.write(patients_risk_factors)
+    patients_risk_factors = process_patients_risk_factors()
+    file.write(patients_risk_factors_schema())
+    file.write(patients_risk_factors)
 
     file.close()
 
