@@ -1,4 +1,3 @@
-import pandas as pd
 from csv import reader
 
 CSV_PATH = "BH.csv"
