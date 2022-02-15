@@ -191,7 +191,10 @@ def process_symptoms():
       "É a dor resultante da inflamação das amígdalas (tonsilite) ou da faringe (faringite). Esta situação pode ocorrer por causas diversas, dentre elas a alérgica, a viral, a bacteriana e a traumática."
     ),
     Symptom("Dispneia", "Sensação subjetiva de falta de ar."),
-    Symptom("Desconforto Respiratório", "teste"),
+    Symptom(
+      "Desconforto Respiratório",
+      "O desconforto respiratório surge como consequência de um desequilíbrio entre os níveis de oxigênio e gás carbônico no sangue. O desconforto respiratório ocorre quando o corpo tem dificuldades para realizar as trocas gasosas normais, necessárias para manter o corpo funcionando. "
+    ),
     Symptom(
       "Diarréia", 
       "Aumento do volume, frequência ou quantidade de líquido nas evacuações. Deve ser a manifestação mais frequente de alteração da absorção ou transporte intestinal de substâncias, alterações estas que em geral são devidas a uma infecção bacteriana ou viral, a toxinas alimentares, etc."
