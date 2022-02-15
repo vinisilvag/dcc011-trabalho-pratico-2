@@ -514,6 +514,8 @@ def process_patients_risk_factors():
 def main():
     file = open('database.sql', 'w+')
 
+    file.write('BEGIN TRANSACTION;\n')
+
     symptoms = process_symptoms()
     file.write(symptom_schema())
     file.write(symptoms)
@@ -537,6 +539,8 @@ def main():
     patients_risk_factors = process_patients_risk_factors()
     file.write(patients_risk_factors_schema())
     file.write(patients_risk_factors)
+
+    file.write('COMMIT;\n')
 
     file.close()
 
