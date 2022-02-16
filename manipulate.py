@@ -351,7 +351,7 @@ def patient_schema():
     DataRegistro TEXT,
     VacinaCOVID INTEGER,
     ClassificacaoFinal VARCHAR(32),
-    CNES NOT NULL REFERENCES UnidadeSaude (CNES)
+    CNES REFERENCES UnidadeSaude (CNES)
 );\n
 """
 
